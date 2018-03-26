@@ -16,19 +16,41 @@ mainList = {
 }
 
 /*for (i = 0; i < 3; i++) {
-	goods[i] = prompt('Какой тип товаров будем продавать?');
+	let a = prompt('Какой тип товаров будем продавать?');
+
+	if ((typeof(a)) === 'string' && (typeof(a)) != null && a != '' && a.length < 50 ) {
+		console.log('Все верно');
+		mainList.shopGoods[i] = a;
+	} else {
+		i = i - 1;
+	}
 }*/
 
 /*var i = 0;
 while (i < 3) {
-	goods[i] = prompt('Какой тип товаров будем продавать?');
-  i++;
+	let a = prompt('Какой тип товаров будем продавать?');
+
+	if ((typeof(a)) === 'string' && (typeof(a)) != null && a != '' && a.length < 50 ) {
+		console.log('Все верно');
+		mainList.goods[i] = a;
+		i++;
+	} else {
+		i = i - 1;
+	}
 }*/
 
 var i = 0;
 do {
-	goods[i] = prompt('Какой тип товаров будем продавать?');
-  i++;
+	let a = prompt('Какой тип товаров будем продавать?');
+
+	if ((typeof(a)) === 'string' && (typeof(a)) != null && a != '' && a.length < 50 ) {
+		console.log('Все верно');
+		mainList.goods[i] = a;
+		i++;
+	} else {
+		i = i - 1;
+	}
+
 } while (i < 3);
 
 console.log(mainList);
