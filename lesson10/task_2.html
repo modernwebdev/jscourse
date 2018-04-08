@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+
+		class options {
+			constructor(height, width, bg, fontSize, textAlign) {
+				this.height = height;
+				this.width = width;
+				this.bg = bg;
+				this.fontSize = fontSize;
+				this.textAlign = textAlign;
+			}
+
+
+			cssText(text) {
+
+				let div = document.createElement('div');
+				document.body.appendChild(div)
+				div.innerHTML = text;
+
+				div.style.height = this.height;
+				div.style.width = this.width;
+				div.style.background = this.bg;
+				div.style.fontSize = this.fontSize;
+				div.style.textAlign = this.textAlign;
+			}
+		}
+
+		const text = new options('50px','800px','red','18px', 'left');
+		text.cssText('Это - текст. А может и не текст. Все в мире относительно');
+
+		const textGreen = new options('100px','500px','green','25px', 'left');
+		textGreen.cssText('А это другой текст. На зелененьком фоне');
+	</script>
+</body>
+</html>
